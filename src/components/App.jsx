@@ -3,20 +3,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);    
     this.state = {VideoInPlayer: window.exampleVideoData[0], VideosInList: window.exampleVideoData};
-    // console.log(this.state.VideoInPlayer.);
   }
 
-  onVideoTitleClick () {
+  onVideoTitleClick (video) {
     //find title of what was clicked in video list
     // match title to object in example video list data
-    console.log('test');
-    // this.setState({
-    //   VideoInPlayer: //title object that was clicked
-    // });
+    // console.log('before click', this.state.VideoInPlayer);
+    this.setState({
+      VideoInPlayer: video
+    });
+    // console.log('after click', this.state.VideoInPlayer);
+    
   }
 
   render() {
-    console.log(this.onVideoTitleClick);
     return (
       <div>
         <Nav />
@@ -24,7 +24,7 @@ class App extends React.Component {
           <VideoPlayer video={this.state.VideoInPlayer} />
         </div>
         <div className="col-md-5">
-          <VideoList videos={this.state.VideosInList} onVideoTitleClick={this.onVideoTitleClick}/>
+          <VideoList videos={this.state.VideosInList} onVideoTitleClick={this.onVideoTitleClick.bind(this)}/>
         </div>
         <a>
         </a>
