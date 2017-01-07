@@ -21,4 +21,4 @@ window.VideoList = VideoList;
 // This is an example response from the YouTube Search API
 // when searching with the query 'react tutorial'
 
-ReactDOM.render(<VideoList videos={window.exampleVideoData}/>, document.getElementById('video-list media'));
+// ReactDOM.render(<VideoList videos={window.exampleVideoData}/>, document.getElementById('video-list media'));
