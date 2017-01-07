@@ -7,6 +7,8 @@ var App = () => (
     <div className="col-md-5">
       <VideoList/>
     </div>
+    <a>
+    </a>
   </div>
 );
 
